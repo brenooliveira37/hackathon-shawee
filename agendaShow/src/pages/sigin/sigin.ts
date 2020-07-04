@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../home/home';
 
 /**
- * Generated class for the PerfilPage page.
+ * Generated class for the SiginPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,21 +10,16 @@ import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
-  selector: 'page-perfil',
-  templateUrl: 'perfil.html',
+  selector: 'page-sigin',
+  templateUrl: 'sigin.html',
 })
-export class PerfilPage {
+export class SiginPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PerfilPage');
-  }
-
-  openHome() {
-    this.navCtrl.setRoot (HomePage);
-    this.navCtrl.popToRoot ();
+    console.log('ionViewDidLoad SiginPage');
   }
 
 }

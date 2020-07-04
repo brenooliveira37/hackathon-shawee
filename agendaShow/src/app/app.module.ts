@@ -6,22 +6,34 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { CadastroPage } from '../pages/cadastro/cadastro';
+import { EventoPage } from "../pages/evento/evento";
+import { PerfilPage } from "../pages/perfil/perfil";
+import { PrincipalPage } from "../pages/principal/principal";
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    CadastroPage,
+    EventoPage,
+    PerfilPage,
+    PrincipalPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp, {
-      iconMode: 'ios'
+      iconMode: 'md'
     })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    CadastroPage,
+    EventoPage,
+    PerfilPage,
+    PrincipalPage
   ],
   providers: [
     StatusBar,
@@ -29,4 +41,5 @@ import { HomePage } from '../pages/home/home';
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
+
 export class AppModule {}

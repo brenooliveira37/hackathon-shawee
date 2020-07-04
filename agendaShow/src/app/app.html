@@ -1,2 +1,69 @@
-<ion-nav [root]="rootPage">
+<ion-menu [content]='content' style="margin-top: 25px;">
+    <ion-content>
+        <ion-list>
+            <ion-list-header>Estabelecimentos</ion-list-header>
+            <ion-item>
+                <ion-checkbox color="secondary" slot="start"></ion-checkbox>
+                <ion-label>Bar</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-checkbox color="secondary" slot="start"></ion-checkbox>
+                <ion-label>Boteco</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-checkbox color="secondary" slot="start"></ion-checkbox>
+                <ion-label>Casa de Show</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-checkbox color="secondary" slot="start"></ion-checkbox>
+                <ion-label>Boate</ion-label>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-list-header>Eventos</ion-list-header>
+            <ion-item>
+                <ion-checkbox color="secondary" slot="start"></ion-checkbox>
+                <ion-label>Shows</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-checkbox color="secondary" slot="start"></ion-checkbox>
+                <ion-label>Rodizios</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-checkbox color="secondary" slot="start"></ion-checkbox>
+                <ion-label>Promoção</ion-label>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-list-header>Especialidades</ion-list-header>
+            <ion-item>
+                <ion-checkbox color="secondary" slot="start"></ion-checkbox>
+                <ion-label>Vegano</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-checkbox color="secondary" slot="start"></ion-checkbox>
+                <ion-label>Vegetariano</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-checkbox color="secondary" slot="start"></ion-checkbox>
+                <ion-label>Churrasco</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-checkbox color="secondary" slot="start"></ion-checkbox>
+                <ion-label>Cerveja Artesanal</ion-label>
+            </ion-item>
+        </ion-list>
+
+        <ion-list>
+            <ion-list-header>Distancia</ion-list-header>
+            <ion-range color="red" pin min="5" max="100" step="5">
+                <ion-icon small range-left name="locate"></ion-icon>
+                <ion-icon range-right name="locate"></ion-icon>
+            </ion-range>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+
+<ion-nav [root]="rootPage" #content>
 </ion-nav>
