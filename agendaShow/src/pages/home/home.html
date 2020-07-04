@@ -1,11 +1,65 @@
-<ion-header>
-    <ion-navbar>
-        <ion-title text-center>
-            <h5 color="primary" style="margin-top: 25px;">AgendaShow</h5>
-        </ion-title>
+<ion-header when="md">
+    <ion-navbar style="margin-top: 25px;">
+        <ion-buttons start>
+            <button ion-button (click)="aplicarEfeito('imgOriginal')">
+              <ion-icon name="funnel"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-searchbar placeholder="Pesquise"></ion-searchbar>
+        <ion-buttons end>
+            <button ion-button>
+              <ion-chip>
+                <ion-label>Breno</ion-label>
+                <ion-avatar>
+                    <img src="../assets/imgs/image.jpg">
+                </ion-avatar>
+            </ion-chip>
+            </button>
+        </ion-buttons>
+
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content padding class="outer-content">
+    <ion-row>
+        <ion-col col-12>
+            <img src="../assets/imgs/teste.jpg">
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-12>
+            <img src="../assets/imgs/teste.jpg">
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-12>
+            <img src="../assets/imgs/teste.jpg">
+        </ion-col>
+    </ion-row>
 </ion-content>
+<ion-footer>
+
+    <h4>
+        time53@dev.com
+    </h4>
+
+</ion-footer>
+<script type="module">
+    import { menuController } from '@ionic/core'; window.menuController = menuController;
+</script>
+
+<script>
+    function openFirst() {
+        menuController.enable(true, 'first');
+        menuController.open('first');
+    }
+
+    function openEnd() {
+        menuController.open('end');
+    }
+
+    function openCustom() {
+        menuController.enable(true, 'custom');
+        menuController.open('custom');
+    }
+</script>
