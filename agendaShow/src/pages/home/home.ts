@@ -4,6 +4,7 @@ import { ViewChild } from '@angular/core';
 import { Nav } from 'ionic-angular';
 import { PrincipalPage } from "../principal/principal";
 import { PerfilPage } from "../perfil/perfil";
+import { EventoPage } from "../evento/evento";
 
 @Component({
   selector: 'page-home',
@@ -13,7 +14,6 @@ export class HomePage {
 
   @ViewChild(Nav) nav:Nav;
 
-  principalPage = PrincipalPage;
 
 
   constructor(public navCtrl: NavController) {
@@ -22,6 +22,11 @@ export class HomePage {
 
   openPerfil() {
     this.navCtrl.setRoot (PerfilPage);
+    this.navCtrl.popToRoot ();
+  }
+
+  openEvento() {
+    this.navCtrl.setRoot (EventoPage);
     this.navCtrl.popToRoot ();
   }
 
