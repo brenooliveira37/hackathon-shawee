@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the SiginPage page.
@@ -20,6 +21,11 @@ export class SiginPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SiginPage');
+  }
+
+  openHome() {
+    this.navCtrl.setRoot (HomePage);
+    this.navCtrl.popToRoot ();
   }
 
 }
