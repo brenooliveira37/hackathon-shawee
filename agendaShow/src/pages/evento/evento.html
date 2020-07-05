@@ -1,55 +1,45 @@
-<ion-content style="background-color: #EFEFEF;">
+<ion-header>
+  <ion-navbar style="margin-top: 25px;">
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
 
-    <div style="margin-top: 25px;">
-        <ion-row>
-            <ion-col col-12>
-                <img src="../assets/imgs/sertanejo.jpeg">
-            </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col col-12 style="background-color: darkblue;">
-                <h4 text-center>BARROCO MINEIRO</h4>
-            </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col col-1 style="background-color: blue;">
-            </ion-col>
-            <ion-col col-11>
-                <div>
-                    <h4>GUSTAVO OLIVEIRA</h4>
-                    <p>MÚSICA SERTANEJA</p>
-                </div>
-                <div>
-                    <p>
-                        ABERTURA: 20H
-                        <BR/> R. DAVID DE MORAIS, 298
-                        <BR/> BAIRRO ALVORADA
-                    </p>
-                </div>
-                <p>
-                    <ion-icon name="call"></ion-icon>(31) 9 9999-9999
-                </p>
-                <p>
-                    <ion-icon name="logo-whatsapp"></ion-icon>(31) 9 9999-9999
-                </p>
-                <p text-center style="font: bold;">
-                    CAIPIRINHA DUPLA ATÉ AS 21H
-                </p>
-                <p>
-                    SIGA NOSSSAS REDES SOCIAIS
-                </p>
-                <p>
-                    <ion-icon name="logo-facebook"></ion-icon>BARROCOMINEIRO
-                </p>
-                <p>
-                    <ion-icon name="logo-instagram"></ion-icon>@BARROCOMINEIRO_MG
-                </p>
-            </ion-col>
-        </ion-row>
-
-    </div>
+<ion-content padding class="outer-content">
+  <img src="../assets/imgs/sertanejo.jpeg" />
+  <ion-row>
+    <ion-col col-12 text-center>
+      <p style="margin-top: -3px;">{{evento.estabelecimento.nome}}</p>
+    </ion-col>
+    <ion-row style="margin-top: -27px;">
+      <ion-col col-12>
+        <p>{{evento.nome}}</p>
+      </ion-col>
+      <ion-col col-12>
+        <p>{{evento.descricao}}</p>
+      </ion-col>
+      <ion-col col-12>
+        <p>{{evento.cronograma}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        Tel: {{evento.estabelecimento.telefone}} Cel:
+        {{evento.estabelecimento.celular}}
+      </ion-col>
+      <ion-col col-12>
+        Endereço: <br />
+        {{evento.estabelecimento.logradouro}} -
+        {{evento.estabelecimento.numero}} <br />
+        {{evento.estabelecimento.cidade}}
+      </ion-col>
+    </ion-row>
+  </ion-row>
 </ion-content>
 
-<ion-content padding>
-
-</ion-content>
+<ion-footer>
+  <h6 text-center style="color: #cccccc;">Time 53</h6>
+</ion-footer>

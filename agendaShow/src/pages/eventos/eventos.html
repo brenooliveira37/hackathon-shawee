@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar style="margin-top: 25px;">
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="outer-content">
+  <ion-row *ngFor="let evento of eventos">
+    <ion-col col-6>
+      <img src="../assets/imgs/sertanejo.jpeg" />
+    </ion-col>
+    <ion-col col-6 text-center>
+      <p style="margin-top: -3px;">{{evento.estabelecimento.nome}}</p>
+      <ion-row style="margin-top: -27px;">
+        <ion-col col-4>
+          <p>{{evento.nome}}</p>
+        </ion-col>
+        <ion-col col-8>
+          <p>{{evento.descricao}}</p>
+        </ion-col>
+      </ion-row>
+      <ion-buttons style="margin-top: -17px;">
+        <button (click)="openEvento(evento.id)">
+          <ion-icon name="add"></ion-icon> INFO
+        </button>
+      </ion-buttons>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+<ion-footer>
+  <h6 text-center style="color: #cccccc;">Time 53</h6>
+</ion-footer>

@@ -1,3 +1,7 @@
+import { EstabelecimentosPage } from './../pages/estabelecimentos/estabelecimentos';
+import { EstabelecimentoPage } from './../pages/estabelecimento/estabelecimento';
+import { EventosPage } from './../pages/eventos/eventos';
+import { HTTP } from '@ionic-native/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -5,20 +9,20 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { CadastroPage } from '../pages/cadastro/cadastro';
 import { EventoPage } from "../pages/evento/evento";
-import { PerfilPage } from "../pages/perfil/perfil";
 import { PrincipalPage } from "../pages/principal/principal";
+import { ServerProvider } from '../providers/server/server';
+import { AuthProvider } from '../providers/auth/auth';
+import { ApiProvider } from '../providers/api/api';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    CadastroPage,
     EventoPage,
-    PerfilPage,
-    PrincipalPage
+    PrincipalPage,
+    EventosPage,
+    EstabelecimentoPage,
+    EstabelecimentosPage
   ],
   imports: [
     BrowserModule,
@@ -29,16 +33,20 @@ import { PrincipalPage } from "../pages/principal/principal";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    CadastroPage,
     EventoPage,
-    PerfilPage,
-    PrincipalPage
+    PrincipalPage,
+    EventosPage,
+    EstabelecimentoPage,
+    EstabelecimentosPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    HTTP,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ServerProvider,
+    AuthProvider,
+    ApiProvider
   ]
 })
 

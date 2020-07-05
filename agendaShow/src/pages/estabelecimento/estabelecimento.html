@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar style="margin-top: 25px;">
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="outer-content">
+  <ion-row >
+    <ion-col col-12 text-center>
+      <p style="margin-top: -3px;">{{estabelecimento.nome}}</p>
+    </ion-col>
+    <ion-row>
+      <ion-col col-12>
+        Tel: {{estabelecimento.telefone}} - 
+        Cel: {{estabelecimento.celular}}
+      </ion-col>
+      <ion-col col-12>
+        Endereço: <br />
+        {{estabelecimento.logradouro}} -
+        {{estabelecimento.numero}} <br />
+        {{estabelecimento.cidade}}
+      </ion-col>
+    </ion-row>
+  </ion-row>
+</ion-content>
+
+<ion-footer>
+  <h6 text-center style="color: #cccccc;">Time 53</h6>
+</ion-footer>

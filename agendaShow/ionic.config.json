@@ -1,5 +1,7 @@
 {
   "name": "agendaShow",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
