@@ -1,6 +1,7 @@
-import { ApiProvider } from './../../providers/api/api';
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { EventoPage } from "./../evento/evento";
+import { ApiProvider } from "./../../providers/api/api";
+import { Component } from "@angular/core";
+import { IonicPage, NavController, NavParams } from "ionic-angular";
 
 /**
  * Generated class for the EventosPage page.
@@ -11,24 +12,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-eventos',
-  templateUrl: 'eventos.html',
+  selector: "page-eventos",
+  templateUrl: "eventos.html",
 })
 export class EventosPage {
   eventos = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public api: ApiProvider) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public api: ApiProvider
+  ) {
     this.api.getEventos().then((resp: any) => {
       this.eventos = resp;
     });
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad EventosPage');
+    console.log("ionViewDidLoad EventosPage");
   }
 
-  openEvento(id){
-    
+  openEvento(id) {
+    this.navCtrl.push(EventoPage, { id: id });
   }
-
 }

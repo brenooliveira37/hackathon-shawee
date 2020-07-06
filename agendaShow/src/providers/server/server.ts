@@ -1,5 +1,4 @@
 import { HTTP } from '@ionic-native/http';
-import { AuthProvider } from './../auth/auth';
 import { Injectable } from '@angular/core';
 
 /*
@@ -11,9 +10,9 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ServerProvider {
 
-  enderecoServidor = 'localhost/api';
+  enderecoServidor = 'http://localhost:8765/api';
 
-  constructor(private httpNative: HTTP, private auth: AuthProvider) { }
+  constructor(private httpNative: HTTP) { }
 
   // metodo para realizar o POST no horus
   POST(controller: any, obj: any) {

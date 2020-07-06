@@ -1,6 +1,7 @@
 import { ApiProvider } from "./../../providers/api/api";
 import { Component } from "@angular/core";
 import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { EstabelecimentoPage } from "../estabelecimento/estabelecimento";
 
 /**
  * Generated class for the EstabelecimentosPage page.
@@ -31,7 +32,7 @@ export class EstabelecimentosPage {
     console.log("ionViewDidLoad EstabelecimentosPage");
   }
 
-  openEstabelecimento(id){
-    
+  openEstabelecimento(id) {
+    this.navCtrl.push(EstabelecimentoPage, { id: id });
   }
 }
