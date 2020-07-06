@@ -12,10 +12,14 @@ export class PrincipalPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   openEventos() {
-    this.navCtrl.push(EventosPage);
+    // this.navCtrl.push(EventosPage);
+    this.navCtrl.setRoot (EventosPage);
+    this.navCtrl.popToRoot();
   }
 
   openEstabelecimentos() {
-    this.navCtrl.push(EstabelecimentosPage);
+    // this.navCtrl.push(EstabelecimentosPage);
+    this.navCtrl.setRoot (EstabelecimentosPage);
+    this.navCtrl.popToRoot();
   }
 }

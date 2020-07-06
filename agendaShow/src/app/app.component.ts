@@ -1,3 +1,5 @@
+import { EstabelecimentosPage } from "./../pages/estabelecimentos/estabelecimentos";
+import { EventosPage } from "./../pages/eventos/eventos";
 import { Component } from "@angular/core";
 import { Platform } from "ionic-angular";
 import { StatusBar } from "@ionic-native/status-bar";
@@ -27,5 +29,16 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+  }
+  openEventos() {
+    // this.navCtrl.push(EventosPage);
+    this.nav.setRoot(EventosPage);
+    this.nav.popToRoot();
+  }
+
+  openEstabelecimentos() {
+    // this.navCtrl.push(EstabelecimentosPage);
+    this.nav.setRoot(EstabelecimentosPage);
+    this.nav.popToRoot();
   }
 }

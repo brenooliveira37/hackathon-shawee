@@ -1,7 +1,7 @@
 <ion-menu [content]="content" style="margin-top: 25px;">
   <ion-content>
     <ion-list>
-      <ion-list-header>Estabelecimentos</ion-list-header>
+      <ion-list-header (click)="openEstabelecimentos()">Estabelecimentos</ion-list-header>
       <ion-item>
         <ion-checkbox color="secondary" slot="start"></ion-checkbox>
         <ion-label>Bar</ion-label>
@@ -20,7 +20,7 @@
       </ion-item>
     </ion-list>
     <ion-list>
-      <ion-list-header>Eventos</ion-list-header>
+      <ion-list-header (click)="openEventos()">Eventos</ion-list-header>
       <ion-item>
         <ion-checkbox color="secondary" slot="start"></ion-checkbox>
         <ion-label>Shows</ion-label>
