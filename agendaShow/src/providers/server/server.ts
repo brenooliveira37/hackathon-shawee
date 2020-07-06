@@ -22,6 +22,7 @@ export class ServerProvider {
 
       this.httpNative.setDataSerializer('json');
       this.httpNative.setHeader(url, 'Accept', 'application/json');
+      this.httpNative.setHeader(url, 'Access-Control-Allow-Origin', '*');
       this.httpNative.setHeader(url, 'Content-Type', 'application/json');
 
       this.httpNative.post(url, obj, {})
